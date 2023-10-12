@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #980000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+.loader_paragraphe {
+    top: 50%;
+}
+.loader_content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.loader1 {
+    text-align: center;
+}
+.loader2 {
+    text-align: center;
+}
+.lettre {
+    color: #484848;
+    font-size: 80px;
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+    animation: flash 2.3s linear infinite;
+}
+.custom-cursor {
+    cursor: url('cursor/GTA5.cur'), auto;
+}
+
+
+h1 {
+    margin: 0;
+
+}
+.no-underline {
+    text-decoration: none;
+    color: #fff;
+    cursor: url('cursor/GTA5.cur'), auto;
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+nav {
+    background-color: #484848;
+    color: #fff;
+    width: 100px;
+    height: 100vh;
+    position: fixed;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+}
+
+main {
+    margin-left: 120px;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5px;
+    margin: 0;
+    border-radius: 10px;
+    width: 30%;
+}
+
+section p {
+    margin: 0;
+}
