@@ -12,7 +12,7 @@ header {
     text-decoration: none;
 }
 .loader_paragraphe {
-    top: 50%;
+    opacity: 70%;
 }
 .loader_content {
     position: absolute;
@@ -20,15 +20,25 @@ header {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    position: fixed;
 }
 .loader1 {
     text-align: center;
+}
+.logo_noir_blanc {
+    width: 6%;
+    height: 6%;
+    border-radius: 10px;
+    float: left;
+    cursor: url('cursor/GTA5.cur'), auto;
+
 }
 .loader2 {
     text-align: center;
 }
 .lettre {
-    color: #484848;
+    color: #c9c9c9;
+    text-shadow: 1px 1px 1px red;
     font-size: 80px;
     letter-spacing: 15px;
     margin-bottom: 150px;
@@ -48,22 +58,40 @@ h1 {
     color: #fff;
     cursor: url('cursor/GTA5.cur'), auto;
 }
-
+.all_serach_barre {
+    margin-top: 10px;
+}
 .search-bar {
-    margin-top: 20px;
+    height: 20px;
+
+}
+.search-button {
+}
+.image_search_barre {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+
+.image_logo_dos {
+    height: 700px;
+    width: 100%;
+    opacity: 100%;
+
 }
 
 nav {
     background-color: #484848;
     color: #fff;
     width: 100px;
-    height: 100vh;
-    position: fixed;
+    height: 2000%;
+    position: absolute;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    position: fixed;
 }
 
 nav li {
