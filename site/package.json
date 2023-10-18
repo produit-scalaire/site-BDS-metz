@@ -1,17 +1,20 @@
 {
-  "name": " ",
-  "version": "0.0.1",
-  "description": "",
-  "keywords": "",
-  "license": "",
-  "author": "",
+  "name": "site",
+  "version": "1.0.0",
+  "description": "site BDS Metz",
+  "main": "public/js/Titre_daccueil.js",
+  "directories": {
+    "doc": "doc"
+  },
   "scripts": {
-    "build": "parcel build index.html",
-    "dev": "parcel index.html --open",
-    "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "nodemon": "^3.0.1"
   }
 }

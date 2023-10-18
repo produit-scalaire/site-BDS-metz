@@ -1,0 +1,126 @@
+body {
+    font-feature: Arial;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(34,30,32,255);
+    background-image: url("/site-bds-metz/site/public/img/logo_dos.png");
+    width: 100%;
+    flex-direction: column;
+    background-size: 100%; /* Ajuste la taille de l'image pour remplir complètement l'arrière-plan */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed; /* Fixe l'image en position de fond */
+    position: fixed;
+}
+
+#redhead {
+    background: linear-gradient(45deg, rgb(243, 62, 62), rgb(133, 20, 20));
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+}
+
+#redhead ul {
+    list-style: none;
+    display: flex;
+}
+#redhead ul li a {
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(315deg, rgb(243, 62, 62), rgb(133, 20, 20));
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+#redhead ul li {
+    margin: 0.4rem 2rem 1rem 0;
+}
+
+
+#redhead ul li a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) ;
+}
+
+
+#logo_noir_blanc {
+    margin: 0.5rem 0 0.5rem 1rem;
+    width: 5rem;
+    height: 3rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+#logo_noir_blanc:hover {
+    box-shadow: none;
+}
+
+.custom-cursor {
+    cursor: url('cursor/GTA5.cur'), auto;
+}
+main div {
+    margin: 10rem 3rem 12rem 3rem;
+    padding: 2rem 2rem 15rem 2rem;
+    background-color: white;
+    opacity: 60%;
+    border: 0.2rem solid rgba(230,173,26,255);
+    border-radius: 10px;
+    align-items: center;
+
+}
+
+main div h1 {
+    text-align: center;
+
+}
+
+main div a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    margin: 2rem 0 0 4rem;
+
+
+}
+
+#input_connexion {
+    margin: 5rem 4rem 0 4rem;
+    padding: 1rem;
+    border: 0.2rem solid rgba(230,173,26,255);
+    border-radius: 10px;
+    display: grid;
+}
+
+#input_connexion input {
+    margin-bottom: 1rem;
+
+}
+
+#logo_noir_rouge {
+    width: 100%;
+    object-fit: cover;
+    margin-top: 4rem;
+}
+
+footer {
+    background: linear-gradient(45deg, #341717, rgba(34,30,32,255));
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+
+}
+
+footer a img {
+    margin-top: 2rem;
+    margin-left: 10rem;
+    height: 4rem;
+    width: 4rem;
+}
+
+footer div h1 {
+    color: white;
+}
+
+footer div p {
+    color: white;
+}
+
