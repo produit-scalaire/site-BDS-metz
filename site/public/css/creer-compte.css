@@ -1,14 +1,14 @@
 body {
-    background-image: url("/img/logo_dos.png");
+    background-image: url("/site-bds-metz/site/public/img/logo_dos.png");
     width: 100%;
     flex-direction: column;
     background-size: 100%; /* Ajuste la taille de l'image pour remplir complètement l'arrière-plan */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     background-attachment: fixed; /* Fixe l'image en position de fond */
-    position: absolute;
+    position: fixed;
 }
 
-#first_div {
+main div {
     margin: 10rem 3rem 12rem 3rem;
     padding: 2rem 2rem 15rem 2rem;
     background-color: white;
@@ -16,21 +16,30 @@ body {
     border: 0.2rem solid rgba(230,173,26,255);
     border-radius: 10px;
     align-items: center;
-    position: relative;
-    z-index: 1;
+
 }
 
-#first_div h1 {
+main div h1 {
     text-align: center;
 
 }
 
-#first_div a {
+main div a {
     text-decoration: none;
     font-size: 1.5rem;
     color: black;
     margin: 2rem 0 0 4rem;
 
+
+}
+
+#input-error {
+    margin: 1rem;
+    border: 0.2rem solid #d57778;
+    background-color: #d53636;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
 
 }
 
@@ -52,5 +61,3 @@ body {
     object-fit: cover;
     margin-top: 4rem;
 }
-
-

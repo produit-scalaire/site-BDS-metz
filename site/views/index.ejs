@@ -1,0 +1,38 @@
+<%- include('includes/head.ejs', {Title: 'welcome'}) %>
+<link rel="stylesheet" type="text/css" href="css/page-daccueil.css">
+</head>
+<body>
+  <%- include('includes/header.ejs') %>
+  <main>
+    <img src="img/logo_dos.png" alt="logo noir et rouge oue oue" id="logo_noir_rouge">
+    <ul id="liste_main">
+      <li>
+      <h1>
+        Sports
+      </h1>
+      <p>
+        La liste des sports est écrite <a href="/Sports" class="custom-cursor">ici</a>
+      </p>
+    </li>
+      <li>
+        <h1>
+          Le BDS
+        </h1>
+        <p>
+          Pour plus d'info sur le BDS cliqué <a href="/Team" class="custom-cursor">ici</a>
+        </p>
+      </li>
+      <li>
+        <h1>
+          Les évènements
+        </h1>
+        <p>
+          Pour plus d'information sur les événements cliqué <a href="/evenement" class="custom-cursor">ici</a>
+        </p>
+      </li>
+    </ul>
+
+  </main>
+  <%- include('includes/footer') %>
+</body>
+</html>

@@ -1,4 +1,4 @@
-let button_element = document.querySelector("#redhead ul li button");
+let button_element = document.querySelector("#menu_button");
 
 let clicked = false;
 let main = document.querySelector("main");

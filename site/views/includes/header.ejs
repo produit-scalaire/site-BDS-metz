@@ -1,0 +1,48 @@
+<header id="redhead">
+    <a href="/" class="custom-cursor"><img id="logo_noir_blanc" src="img/noir_et_blanc-1.png" alt="logo BDS" >
+    </a>
+      <ul>
+        <% if (!locals.isAuth) { %>
+            <li>
+                <a href="/connexion" class="custom-cursor">Se connecter</a>
+            </li>
+         <% } %>
+        <% if (locals.isAdmin) { %>
+          <li>
+            <a href="/admin" class="custom-cursor">Admin</a>
+          </li>
+        <% } %>
+        <% if (locals.isAuth) { %>
+          <li>
+            <form action="/logout" method="POST">
+              <button>Se déconnecter</button>
+            </form>
+          </li>
+        <% } %>
+        <li>
+          <button id="menu_button">
+            Menu
+          </button>
+        </li>
+      </ul>
+  </header>
+  <nav id="nav_id">
+      <ul>
+        <li>
+          <a href="/Team" class="custom-cursor">Team</a>
+        </li>
+        <li>
+          <a href="/Contact" class="custom-cursor">Contact</a>
+        </li>
+        <li>
+          <a href="/Sports" class="custom-cursor">Les sports</a>
+        </li>
+        <li>
+          <a href="/evenement" class="custom-cursor">Les événements</a>
+        </li>
+        <li>
+          <a href="/A propos" class="custom-cursor">À propos</a>
+        </li>
+
+      </ul>
+  </nav>

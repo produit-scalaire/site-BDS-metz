@@ -1,0 +1,108 @@
+body {
+    font-feature: Arial;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(34,30,32,255);
+}
+
+#redhead {
+    background: linear-gradient(45deg, rgb(243, 62, 62), rgb(133, 20, 20));
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+#redhead ul {
+    list-style: none;
+    display: flex;
+}
+#redhead ul li a {
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(315deg, rgb(243, 62, 62), rgb(133, 20, 20));
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+#redhead ul li {
+    margin: 0.4rem 2rem 1rem 0;
+}
+
+#redhead ul li button {
+    background: linear-gradient(315deg, rgb(243, 62, 62), rgb(133, 20, 20))
+
+}
+
+#redhead ul li a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) ;
+}
+
+
+#logo_noir_blanc {
+    margin: 0.5rem 0 0.5rem 1rem;
+    width: 5rem;
+    height: 3rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+#logo_noir_blanc:hover {
+    box-shadow: none;
+}
+
+.custom-cursor {
+    cursor: url('cursor/GTA5.cur'), auto;
+}
+
+footer {
+    background: linear-gradient(45deg, #341717, rgba(34,30,32,255));
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+}
+
+footer a img {
+    margin-top: 2rem;
+    margin-left: 10rem;
+    height: 4rem;
+    width: 4rem;
+}
+
+footer div h1 {
+    color: white;
+}
+
+footer div p {
+    color: white;
+}
+
+#nav_id {
+    padding: 1rem;
+    background: linear-gradient(180deg, rgb(243, 62, 62), rgb(133, 20, 20));
+    display: none;
+    justify-content: center;
+    width: 100%;
+}
+
+#nav_id ul {
+    list-style: none;
+    display: flex;
+    margin-top: 4rem;
+    position: fixed;
+
+}
+
+#nav_id ul li a {
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(315deg, rgb(243, 62, 62), rgb(133, 20, 20));
+    padding: 0.5rem;
+    border-radius: 10px;
+
+}
+
+#nav_id ul li {
+    margin: 0.4rem 2rem 1rem 0;
+}

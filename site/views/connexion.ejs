@@ -1,0 +1,36 @@
+<%- include('includes/head', {Title: 'connexion'})%>
+<link rel="stylesheet" type="text/css" href="css/connexion.css">
+</head>
+<body>
+  <%- include('includes/header') %>
+  <main>
+    <div id="first_div">
+      <h1>
+        Connexion
+      </h1>
+      <% if (inputData.hasError) {%>
+        <p id="input-error">
+          <%= inputData.message %>
+        </p>
+      <% } %>
+      <section id="input_connexion">
+        <form  action="/connexion" method="POST">
+          <div>
+            <label for="email">Nom d'utilisateur : </label>
+            <input type="email" id="email" name="email" value="<%= inputData.email %>" required>
+          </div>
+          <div>
+            <label for="password">Mot de passe : </label>
+            <input type="password" id="password" name="password" value="<%= inputData.password %>" required>
+          </div>
+          <button>
+            Se connecter
+          </button>
+        </form>
+      </section>
+      <a href="/creer-compte" class="custom-cursor">Créer un compte</a>
+    </div>
+  </main>
+  <%- include('includes/footer') %>
+</body>
+</html>
