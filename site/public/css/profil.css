@@ -33,32 +33,3 @@ body {
 
 
 }
-
-#input_connexion {
-    margin: 5rem 4rem 0 4rem;
-    padding: 1rem;
-    border: 0.2rem solid rgba(230,173,26,255);
-    border-radius: 10px;
-    display: grid;
-}
-
-#input_connexion input {
-    width: 20rem;
-    margin-bottom: 1rem;
-
-}
-
-#logo_noir_rouge {
-    width: 100%;
-    object-fit: cover;
-    margin-top: 4rem;
-}
-
-#input-error {
-    text-align: center;
-    margin: 0 5rem 0 5rem;
-    color: #ffffff;
-    background-color: #d58879;
-    border: 0.2rem solid #c23333;
-}
-

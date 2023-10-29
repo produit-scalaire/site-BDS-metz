@@ -11,30 +11,26 @@ router.get('/', function (req, res) {
 });
 
 router.get('/creer-compte', function (req, res) {
-  let sessionInputData = req.session.inputData;
-
-  if (!sessionInputData) {
-    sessionInputData = {
-      hasError: false,
-      email: '',
-      confirmEmail: '',
-      password: '',
-      confirmPassword: ''
-    };
-  }
+  var sessionInputData = {
+        hasError: false,
+        nom: '',
+        prenom: '',
+        nom_dutilisateur: '',
+        email: '',
+        confirmEmail: '',
+        password: '',
+        confirmPassword: ''
+      };
   req.session.input = null;
   res.render('creer_compte', {inputData: sessionInputData});
 });
 
 router.get('/connexion', function (req, res) {
   let sessionInputData = req.session.inputData;
-
-  if (!sessionInputData) {
-    sessionInputData = {
-      hasError: false,
-      email: '',
-      password: '',
-    };
+  sessionInputData = {
+    hasError: false,
+    nom_dutilisateur: '',
+    password: '',
   }
 
   req.session.input = null;
@@ -43,12 +39,18 @@ router.get('/connexion', function (req, res) {
 
 router.post('/creer-compte', async function (req, res) {
   const userData = req.body;
+  const enteredNom = userData.nom;
+  const enteredPrenom = userData.prenom;
+  const enteredNom_dutilisateur = userData.nom_dutilisateur;
   const enteredEmail = userData.email;
   const enteredConfirmEmail = userData['confirm-email'];
   const enteredPassword = userData.password;
   const enteredConfirmPassword = userData['confirm-password'];
 
-  if (!enteredEmail ||
+  if (!enteredNom ||
+    !enteredPrenom ||
+    !enteredNom_dutilisateur ||
+    !enteredEmail ||
     !enteredConfirmEmail ||
     !enteredConfirmPassword ||
     !enteredPassword ||
@@ -60,6 +62,9 @@ router.post('/creer-compte', async function (req, res) {
     req.session.inputData = {
       hasError: true,
       message: 'Invalid input - please check your data.',
+      nom: enteredNom,
+      prenom: enteredPrenom,
+      nom_dutilisateur: enteredNom_dutilisateur,
       email: enteredEmail,
       confirmEmail: enteredConfirmEmail,
       password: enteredPassword,
@@ -78,6 +83,9 @@ router.post('/creer-compte', async function (req, res) {
     req.session.inputData = {
       hasError: true,
       message: 'User exists already!',
+      nom: enteredNom,
+      prenom: enteredPrenom,
+      nom_dutilisateur: enteredNom_dutilisateur,
       email: enteredEmail,
       confirmEmail: enteredConfirmEmail,
       password: enteredPassword,
@@ -92,8 +100,11 @@ router.post('/creer-compte', async function (req, res) {
   const hashedPassword = await bcrypt.hash(enteredPassword, 12);
 
   const user = {
+    nom: enteredNom,
+    prenom: enteredPrenom,
+    nom_dutilisateur: enteredNom_dutilisateur,
     email: enteredEmail,
-    password: hashedPassword,
+    password: hashedPassword
   }
 
   await db.getDb().collection('users').insertOne(user);
@@ -103,16 +114,16 @@ router.post('/creer-compte', async function (req, res) {
 
 router.post('/connexion', async function (req, res) {
   const userData = req.body;
-  const enteredEmail = userData.email;
+  const enteredNom_dutilisateur = userData.nom_dutilisateur;
   const enteredPassword = userData.password;
 
-  const existingUser = await db.getDb().collection('users').findOne({email: enteredEmail});
+  const existingUser = await db.getDb().collection('users').findOne({nom_dutilisateur: enteredNom_dutilisateur});
 
   if (!existingUser) {
     req.session.inputData = {
       hasError: true,
       message: 'Could not log you in - please check your credentials!',
-      email: enteredEmail,
+      nom_dutilisateur: enteredNom_dutilisateur,
       password: enteredPassword,
     };
     req.session.save(function () {
@@ -127,7 +138,7 @@ router.post('/connexion', async function (req, res) {
     req.session.inputData = {
       hasError: true,
       message: 'Could not log you in - please check your credentials!',
-      email: enteredEmail,
+      nom_dutilisateur: enteredNom_dutilisateur,
       password: enteredPassword,
     };
     req.session.save(function () {
@@ -135,14 +146,14 @@ router.post('/connexion', async function (req, res) {
     })
     return;
   }
-
-  req.session.user = { id: existingUser._id, email: existingUser.email};
+  req.session.user = { id: existingUser._id, nom_dutilisateur: existingUser.nom_dutilisateur};
   req.session.isAuthenticated = true;
   req.session.save(function () {
-    res.redirect('/profile');
+    res.redirect('/');
   });
 });
-router.get('/profile', function (req, res) {
+
+router.get('/profile', function(req, res) {
   if (!req.session.isAuthenticated) {
     return res.status(401).render('401');
   }
@@ -157,7 +168,7 @@ router.get('/admin', async function (req, res) {
   if (!user || !user.isAdmin) {
     res.status(403).render('403');
   }
-  res.render('admin-page');
+  await res.render('admin-page');
 })
 
 router.post('/logout', function (req, res) {
@@ -165,5 +176,10 @@ router.post('/logout', function (req, res) {
   req.session.isAuthenticated = false;
   res.redirect('/');
 });
+
+router.get('/contact', function (req, res) {
+  res.render('contact')
+})
+
 
 module.exports = router;
