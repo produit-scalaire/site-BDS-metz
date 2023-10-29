@@ -31,8 +31,17 @@ body {
 }
 
 #redhead ul li button {
-    background: linear-gradient(315deg, rgb(243, 62, 62), rgb(133, 20, 20))
+    border: none;
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(315deg, rgb(243, 62, 62), rgb(133, 20, 20));
+    padding: 0.5rem;
+    border-radius: 10px;
 
+}
+
+#redhead ul li button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) ;
 }
 
 #redhead ul li a:hover {

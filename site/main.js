@@ -41,6 +41,7 @@ app.use(async function(req, res, next) {
   const userDoc = await db.getDb().collection('users').findOne({_id: user.id})
   const isAdmin = userDoc.isAdmin;
 
+  res.locals.user = userDoc;
   res.locals.isAuth = isAuth;
   res.locals.isAdmin = isAdmin;
 

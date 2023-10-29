@@ -25,11 +25,6 @@ body {
 
 }
 
-#first_div a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: black;
-    margin: 2rem 0 0 4rem;
-
-
+#first_div ul {
+    list-style: none;
 }

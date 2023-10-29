@@ -18,11 +18,6 @@
               <button>Se déconnecter</button>
             </form>
           </li>
-          <li>
-              <form action="/profile" method="get">
-                  <a href="/profile" class="custom-cursor">profile</a>
-              </form>
-          </li>
         <% } %>
         <li>
           <button id="menu_button">
@@ -48,6 +43,12 @@
         <li>
           <a href="/A-propos" class="custom-cursor">À propos</a>
         </li>
-
+          <% if (locals.isAuth) {%>
+          <li>
+              <form action="/profile" method="get">
+                  <a href="/profile" class="custom-cursor">profile</a>
+              </form>
+          </li>
+          <% } %>
       </ul>
   </nav>

@@ -11,7 +11,7 @@ router.get('/', function (req, res) {
 });
 
 router.get('/creer-compte', function (req, res) {
-  var sessionInputData = {
+  let sessionInputData = {
         hasError: false,
         nom: '',
         prenom: '',
@@ -181,5 +181,27 @@ router.get('/contact', function (req, res) {
   res.render('contact')
 })
 
+router.get('/sports', function (req,res) {
+  res.render('sports')
+})
+
+router.get('/services', function (req,res) {
+  res.render('services')
+})
+
+router.get('/team', function (req,res) {
+  res.render('team')
+})
+
+router.get('/a-propos', function (req,res) {
+  res.render('a_propos')
+})
+
+router.post('/supprimer-compte', function (req,res) {
+  db.getDb().collection('users').deleteOne({_id: req.session.id})
+  req.session.user = null;
+  req.session.isAuthenticated = false;
+  res.redirect('/');
+})
 
 module.exports = router;
