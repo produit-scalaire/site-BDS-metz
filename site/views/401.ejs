@@ -1,9 +1,14 @@
 <%- include('includes/head.ejs', {Title: 'error 500'}) %>
+<link rel="stylesheet" type="text/css" href="css/401.css">
 <head>
 <body>
-<%- include('includes/header.ejs') %>
-<main>
-    error 500
-</main>
+    <%- include('includes/header.ejs') %>
+    <main>
+        <div id="first_div">
+            <h1>
+                Erreur 401 - Non autorisé : Accès refusé. Vous n'avez pas les permissions nécessaires pour accéder à cette ressource.
+            </h1>
+        </div>
+    </main>
 </body>
 

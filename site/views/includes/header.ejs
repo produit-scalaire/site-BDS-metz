@@ -7,11 +7,6 @@
                 <a href="/connexion" class="custom-cursor">Se connecter</a>
             </li>
          <% } %>
-        <% if (locals.isAdmin) { %>
-          <li>
-            <a href="/admin" class="custom-cursor">Admin</a>
-          </li>
-        <% } %>
         <% if (locals.isAuth) { %>
           <li>
             <form action="/logout" method="POST">
@@ -50,5 +45,10 @@
               </form>
           </li>
           <% } %>
+          <% if (locals.isAdmin) { %>
+          <li>
+            <a href="/admin" class="custom-cursor">Admin</a>
+          </li>
+        <% } %>
       </ul>
   </nav>

@@ -1,9 +1,14 @@
 <%- include('includes/head.ejs', {Title: 'error 500'}) %>
+<link rel="stylesheet" type="text/css" href="css/401.css">
 <head>
 <body>
-<%- include('includes/header.ejs') %>
-<main>
-    error 500
-</main>
+    <%- include('includes/header.ejs') %>
+    <main>
+        <div id="first_div">
+            <h1>
+                Erreur 500 - Erreur interne du serveur : Le serveur a rencontré une erreur interne ou une condition inattendue et n'a pas pu répondre à votre requête.
+            </h1>
+        </div>
+    </main>
 </body>
 

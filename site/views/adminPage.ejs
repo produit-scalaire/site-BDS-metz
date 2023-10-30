@@ -1,0 +1,29 @@
+<%- include('includes/head', {Title : 'Admin page'}) %>
+<link rel="stylesheet" type="text/css" href="css/adminPage.css">
+</head>
+<body>
+    <%- include('includes/header') %>
+    <main>
+        <div id="first_div">
+            <h1>
+                This is the admin page
+            </h1>
+            <ul>
+                <li>
+                    <h2>
+                        Faire de quelqu'un un admin
+                    </h2>
+                    <form action="">
+                        <label for="utilisateurs">Nom d'utilisateur</label>
+                        <select name="utilisateurs" id="utilisateurs">
+                            <% users.forEach(user => { %>
+                                <option value="<%= user.nom_dutilisateur %>"><%= user.nom_dutilisateur %></option>
+                            <% }); %>
+                        </select>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <%- include('includes/footer') %>
+</body>
